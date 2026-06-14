@@ -1,0 +1,18 @@
+Control: App de IA/ML en contenedor. Curso Modelos en Produccion, UNI 2026.
+Objetivo: construir una pequena app de IA/ML que reciba una entrada (una
+pregunta o un texto) y devuelva una respuesta (respuesta de IA o prediccion),
+empaquetarla en una imagen Docker y entregarla para levantarla y probarla.
+
+Definicion de Hecho: 1) Va empaquetada en una imagen Docker que arranca con un
+solo comando. 2) Incluye un README con como construir o cargar la imagen, como
+correrla y un ejemplo de entrada a respuesta. 3) Si usa una API key, se inyecta
+en runtime con -e API_KEY=..., nunca dentro de la imagen. 4) Se entrega la
+imagen de cualquier forma: link a GHCR, archivo .tar (docker save) o repo con
+el Dockerfile.
+
+Rubrica (20 puntos): la imagen arranca con un solo docker run (6); el modelo de
+IA funciona y responde de forma correcta y pertinente a la entrada (6); README
+claro con construir, correr y un ejemplo (3); puntos extra como Git limpio,
+GHCR, CI con GitHub Actions, Dockerfile slim, tests, lint (5).
+
+Fecha limite: 13 de junio de 2026. Modalidad: individual.

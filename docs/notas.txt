@@ -1,0 +1,6 @@
+Esta app implementa un RAG (Retrieval Augmented Generation) minimo. Carga
+archivos .txt de la carpeta docs, genera embeddings con el modelo
+gemini-embedding-001, recupera los fragmentos mas relevantes por similitud
+coseno y responde la pregunta con el modelo gemini-2.5-flash. No usa base de
+datos: el indice vive en memoria como una matriz de numpy. La API key se pasa
+en tiempo de ejecucion mediante la variable de entorno GOOGLE_API_KEY.
