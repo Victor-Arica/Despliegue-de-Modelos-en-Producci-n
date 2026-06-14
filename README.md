@@ -7,6 +7,11 @@ API REST mínima de RAG (Retrieval Augmented Generation) sobre documentos `.txt`
 - Ante una pregunta, recupera los fragmentos más relevantes con similitud coseno y los pasa a `gemini-2.5-flash`.
 - El índice se construye en memoria en la primera petición a `/ask`, por lo que el contenedor arranca de inmediato.
 
+## Tema de los documentos
+- `docs/` contiene tres textos temáticos relacionados entre sí: mamíferos, aves y reptiles.
+- La idea es consultar características biológicas, hábitat, alimentación, adaptación y clasificación general.
+- Si quieres ampliar la base de conocimiento, agrega más `.txt` con el mismo tema y reconstruye la imagen.
+
 ## Requisitos
 - Docker.
 - Una API key de Google Gemini desde https://aistudio.google.com/apikey.
@@ -73,8 +78,9 @@ ruff check .
 
 ## Estructura
 ```text
+tests/      tests sin API key
 app/        código de FastAPI y motor RAG
-docs/       documentos .txt indexados
+docs/       textos temáticos sobre mamíferos, aves y reptiles
 tests/      tests sin API key
 Dockerfile  imagen de producción slim y no-root
 ```
